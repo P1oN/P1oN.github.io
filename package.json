@@ -1,0 +1,38 @@
+{
+  "name": "p1on.github.io",
+  "version": "1.0.0",
+  "description": "Personal portfolio — built with Astro, designed to fit within 14 KB compressed.",
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check",
+    "build": "astro build && node scripts/check-budget.mjs",
+    "preview": "astro preview",
+    "test": "playwright test",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/P1oN/P1oN.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/P1oN/P1oN.github.io/issues"
+  },
+  "homepage": "https://github.com/P1oN/P1oN.github.io#readme",
+  "dependencies": {
+    "astro": "^7.3.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@playwright/test": "^1.63.0",
+    "chrome-launcher": "^1.2.1",
+    "lighthouse": "^13.4.1",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^6.0.3"
+  },
+  "private": true
+}

@@ -1,0 +1,110 @@
+---
+import { projects } from "../data/content";
+---
+
+<section id="projects" aria-labelledby="projects-title">
+  <p class="eyebrow">02 / SMALL TOOLS &amp; EXPERIMENTS</p><h2
+    id="projects-title"
+  >
+    Built to explore. Made to work.
+  </h2>
+  <div class="project-grid">
+    {
+      projects.map((project) => (
+        <article class="project-card">
+          <div class={`preview preview-${project.id}`} aria-hidden="true">
+            {project.id === "widget" && (
+              <div class="mini-widget">
+                <div class="mini-button">
+                  Explore demos <span>⌄</span>
+                </div>
+                <div class="mini-menu">
+                  <div>
+                    <span class="mini-icon">↗</span> Minimal CV{" "}
+                    <small>HTML</small>
+                  </div>
+                  <div>
+                    <span class="mini-icon">✓</span> Todo List{" "}
+                    <small>REACT</small>
+                  </div>
+                  <div class="mini-caption">One registry. Small footprint.</div>
+                </div>
+              </div>
+            )}
+            {project.id === "cv" && (
+              <div class="mini-cv">
+                <div class="mini-cv-head">
+                  Boryslav
+                  <br />
+                  Mytrofanov<span>Software Engineer</span>
+                </div>
+                <div class="mini-columns">
+                  <div>
+                    <b>EXPERIENCE</b>
+                    <i />
+                    <i />
+                    <i />
+                    <b>SELECTED WORK</b>
+                    <i />
+                    <i />
+                  </div>
+                  <div>
+                    <b>FOCUS</b>
+                    <span>
+                      Architecture
+                      <br />
+                      Performance
+                      <br />
+                      Web platforms
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )}
+            {project.id === "todo" && (
+              <div class="mini-todo">
+                <div class="mini-todo-top">
+                  A little progress, daily.<span>＋</span>
+                </div>
+                <div class="mini-filters">
+                  All <span>Active</span>
+                  <span>Done</span>
+                </div>
+                <div class="task done">
+                  <span>✓</span> Sketch the idea
+                </div>
+                <div class="task">
+                  <span /> Build something useful
+                </div>
+                <div class="task">
+                  <span /> Make the details count
+                </div>
+              </div>
+            )}
+          </div>
+          <div class="project-body">
+            <>
+              <p class="eyebrow">{project.tag}</p>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div class="project-links">
+                {project.demo && (
+                  <a href={project.demo}>
+                    Live demo <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                <a href={project.source}>
+                  Source code{" "}
+                  <>
+                    <span aria-hidden="true">↗</span>
+                    <span class="sr-only"> for {project.title}</span>
+                  </>
+                </a>
+              </div>
+            </>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
