@@ -1,4 +1,15 @@
-export const currentCompany = "Stape";
+export const currentCompany = {
+  name: "Stape",
+  linkedin: "https://www.linkedin.com/company/stape/",
+};
+export const previousCompanies = [
+  { name: "Techery", linkedin: "https://www.linkedin.com/company/techery/" },
+  { name: "Rozetka", linkedin: "https://www.linkedin.com/company/rozetka/" },
+  {
+    name: "Grain Capital",
+    linkedin: "https://www.linkedin.com/company/zeoua/",
+  },
+];
 
 export const work = [
   {

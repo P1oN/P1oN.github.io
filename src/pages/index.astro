@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Work from "../components/Work.astro";
 import Projects from "../components/Projects.astro";
-import { currentCompany } from "../data/content";
+import { currentCompany, previousCompanies } from "../data/content";
 const description =
   "Boryslav Mytrofanov — senior frontend-first software engineer building reliable web applications with React, Next.js, and TypeScript.";
 ---
@@ -90,12 +90,27 @@ const description =
               >Read CV <span aria-hidden="true">↗</span></a
             >
           </div><p class="current-company">
-            Currently at <strong>{currentCompany}</strong>
-          </p><p class="previously">
-            Previously at <span>Techery</span><span aria-hidden="true">·</span
-            ><span>Rozetka</span><span aria-hidden="true">·</span><span
-              >Grain Capital</span
+            Currently at <strong
+              ><a
+                href={currentCompany.linkedin}
+                aria-label={`${currentCompany.name} on LinkedIn`}
+                >{currentCompany.name}</a
+              ></strong
             >
+          </p><p class="previously">
+            Previously at {
+              previousCompanies.map((company, index) => (
+                <>
+                  {index > 0 && <span aria-hidden="true">·</span>}
+                  <a
+                    href={company.linkedin}
+                    aria-label={`${company.name} on LinkedIn`}
+                  >
+                    {company.name}
+                  </a>
+                </>
+              ))
+            }
           </p>
         </section>
         <Work /><Projects />
