@@ -1,3 +1,5 @@
+export const currentCompany = "Stape";
+
 export const work = [
   {
     company: "Techery",

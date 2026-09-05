@@ -812,3 +812,16 @@ nav,
 .contact > div {
   min-width: 0;
 }
+
+.current-company {
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.current-company strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+.current-company + .previously {
+  margin-top: 12px;
+}

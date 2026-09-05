@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Work from "../components/Work.astro";
 import Projects from "../components/Projects.astro";
+import { currentCompany } from "../data/content";
 const description =
   "Boryslav Mytrofanov — senior frontend-first software engineer building reliable web applications with React, Next.js, and TypeScript.";
 ---
@@ -68,7 +69,8 @@ const description =
               stroke-width="1.5"></circle><path
               d="M12 4a8 8 0 0 1 0 16z"
               fill="currentColor"></path></svg
-          ></button>
+          ></button
+        >
       </header>
       <main id="main">
         <section class="hero" aria-labelledby="hero-title">
@@ -85,11 +87,15 @@ const description =
             <a class="button" href="#work"
               >View selected work <span aria-hidden="true">↗</span></a
             ><a class="text-link" href="/cv/"
-              >Read CV <span aria-hidden="true">↗</span></a>
-          </div><p class="previously">
+              >Read CV <span aria-hidden="true">↗</span></a
+            >
+          </div><p class="current-company">
+            Currently at <strong>{currentCompany}</strong>
+          </p><p class="previously">
             Previously at <span>Techery</span><span aria-hidden="true">·</span
             ><span>Rozetka</span><span aria-hidden="true">·</span><span
-              >Grain Capital</span>
+              >Grain Capital</span
+            >
           </p>
         </section>
         <Work /><Projects />
@@ -114,7 +120,8 @@ const description =
             <h2 id="contact-title">Have a product worth building?</h2><p>
               Let’s talk.
             </p><a href="mailto:borispion@gmail.com"
-              >borispion@gmail.com <span aria-hidden="true">↗</span></a>
+              >borispion@gmail.com <span aria-hidden="true">↗</span></a
+            >
           </div>
         </section>
       </main>
