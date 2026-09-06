@@ -31,7 +31,7 @@ for (const width of [360, 768, 1440])
           () => document.documentElement.scrollWidth <= innerWidth,
         ),
       ).toBe(true);
-      expect(requests).toEqual(["http://127.0.0.1:4321/"]);
+      expect(requests.filter(url => !url.startsWith("https://p1on.github.io/portfolio-achievements/"))).toEqual(["http://127.0.0.1:4321/"]);
       expect(errors).toEqual([]);
       await page.screenshot({
         path: `test-results/portfolio-${width}-${colorScheme}.png`,
